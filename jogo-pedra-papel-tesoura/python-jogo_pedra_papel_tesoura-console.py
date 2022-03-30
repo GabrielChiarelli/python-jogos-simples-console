@@ -1,7 +1,7 @@
 #Jogo criado por Gabriel Chiarelli - 30/03/2022
 
-from random import randint
-from time import sleep
+from random import randint                                                          # importa a função 'randint' do módulo 'random'
+from time import sleep                                                              # importa a função 'sleep' do módulo 'time'
 
 opcao = 'S'                                                                         # diz se o jogador quer continuar jogando (começa com 'S' (sim))
 vcpu = 0                                                                            # vitórias do computador
@@ -12,7 +12,7 @@ print('JO-KEN-PÔ')
 print('-=' * 5)
 
 while opcao in 'S':
-    computador = randint(0, 2)
+    computador = randint(0, 2)                                                      # o computador sorteia um número entre 0 e 2, através do módulo 'random'
     #print(f'DEBUG: O COMPUTADOR ESCOLHEU: {computador}')                           # remover a '#' para ver a jogada do computador e, assim, testar o jogo
     print('[ 0 ] PEDRA [ 1 ] PAPEL [ 2 ] TESOURA')
     jogador = str(input('Sua jogada: '))
@@ -22,7 +22,7 @@ while opcao in 'S':
         if jogador in '012':
             break
 
-    sleep(0.7)                                                                      # o computador "dorme" por x segundos, dando a ilusão de que ele está pensando
+    sleep(0.7)                                                                      # o computador "dorme" por X segundos, dando a ilusão de que ele está pensando, através do módulo 'time'
 
     if computador == 0:                                                             # se o computador jogar PEDRA
         if jogador == '0':
